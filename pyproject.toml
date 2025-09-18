@@ -1,0 +1,57 @@
+[project]
+name = "sales-data-processor"
+version = "0.1.0"
+description = "A modular, object-oriented pipeline using Python to process sales and customer data"
+readme = "README.md"
+authors = [
+    { name = "David M.", email = "10966271+jhumigas@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "delta-spark>=3.3.2",
+    "loguru>=0.7.3",
+    "pandas>=2.3.2",
+    "pandera[polars]>=0.26.1",
+    "polars>=1.33.1",
+    "pydantic>=2.9.2",
+    "pydantic-settings>=2.10.1",
+    "pyspark==3.5.3",
+    "python-dotenv>=1.1.1",
+]
+
+[project.scripts]
+sales-data-processor = "sales_data_processor:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "bandit>=1.8.6",
+    "chispa==0.9.2",
+    "detect-secrets>=1.5.0",
+    "ipython>=9.5.0",
+    "marimo>=0.15.3",
+    "pre-commit>=4.3.0",
+    "pytest>=8.4.2",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.13.0",
+    "safety>=3.6.1",
+]
+
+
+[tool.bandit]
+exclude_dirs = ["tests", ".venv"]
+tests = ["B201", "B301"]
+skips = ["B101", "B601"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = [
+    "tests"
+]
+
+[tool.coverage.run]
+source=["src/sales_data_processor/*"]
+omit=["tests/*",".venv/*"]
