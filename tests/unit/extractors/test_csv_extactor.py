@@ -141,7 +141,7 @@ class TestCSVExtractor:
         """Test that extracting empty file raises ExtractionError."""
         # Arrange
         empty_csv_path = os.path.join(temp_dir, "empty.csv")
-        with open(empty_csv_path, "w") as f:
+        with open(empty_csv_path, "w"):
             pass  # Create empty file
 
         # Act & Assert

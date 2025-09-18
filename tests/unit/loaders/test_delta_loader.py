@@ -4,8 +4,7 @@ Simple unit tests for Delta Loader.
 
 import pytest
 import os
-import tempfile
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType
+from pyspark.sql.types import StructType
 
 from sales_data_processor.loaders.delta_loader import DeltaLoader
 from sales_data_processor.loaders.exceptions import LoadingError

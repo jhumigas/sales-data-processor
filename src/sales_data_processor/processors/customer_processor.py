@@ -1,4 +1,4 @@
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict
 from pyspark.sql import DataFrame
 from pyspark.sql import types as T
 from pyspark.sql import functions as F

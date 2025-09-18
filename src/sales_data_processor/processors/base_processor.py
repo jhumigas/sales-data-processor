@@ -5,8 +5,6 @@ from pyspark.sql import functions as F
 from pyspark.sql import types as T
 from loguru import logger
 
-from sales_data_processor.processors.exceptions import ProcessingError
-
 
 class IBaseProcessor(abc.ABC):
     """Base interface for data processors."""

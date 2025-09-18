@@ -4,7 +4,6 @@ from pyspark.sql import DataFrame, SparkSession
 from pyspark.sql.types import StructType
 
 from sales_data_processor.extractors.exceptions import ExtractionError
-from sales_data_processor.core.spark_session import get_spark
 from sales_data_processor.extractors.base_extractor import IBaseExtractor
 
 

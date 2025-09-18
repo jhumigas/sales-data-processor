@@ -2,7 +2,6 @@ from typing import Optional, Dict, Any
 from pyspark.sql import DataFrame, SparkSession
 
 from sales_data_processor.loaders.exceptions import LoadingError
-from sales_data_processor.core.spark_session import get_spark
 from sales_data_processor.loaders.base_loader import IBaseLoader
 
 

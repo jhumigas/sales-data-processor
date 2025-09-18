@@ -8,8 +8,8 @@ import tempfile
 import shutil
 import csv
 import os
-from typing import List, Dict, Any
-from pyspark.sql import SparkSession, DataFrame
+from typing import List
+from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType
 from delta.pip_utils import configure_spark_with_delta_pip
 
@@ -119,11 +119,6 @@ def sample_csv_files(temp_dir, csv_writer):
     )
 
     # CSV with pipe delimiter
-    pipe_data = [
-        ["name", "age", "city"],
-        ["Alice", "25", "New York"],
-        ["Bob", "30", "Los Angeles"],
-    ]
     pipe_file = os.path.join(temp_dir, "pipe_delimited.csv")
     with open(pipe_file, "w") as f:
         f.write("name|age|city\n")

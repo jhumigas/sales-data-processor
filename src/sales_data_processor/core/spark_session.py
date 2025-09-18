@@ -1,5 +1,5 @@
 from loguru import logger
-from typing import Optional, Dict
+from typing import Optional
 from pyspark.sql import SparkSession
 from delta.pip_utils import configure_spark_with_delta_pip
 

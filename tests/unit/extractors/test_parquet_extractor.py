@@ -5,14 +5,12 @@ Uses fixtures from conftest.py for Spark session and test data management.
 
 import pytest
 import os
-import tempfile
 from pyspark.sql.types import (
     StructType,
     StructField,
     StringType,
     IntegerType,
     DoubleType,
-    TimestampType,
 )
 from chispa import assert_df_equality
 

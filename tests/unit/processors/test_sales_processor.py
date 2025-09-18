@@ -6,7 +6,6 @@ import pytest
 from pyspark.sql import types as T
 
 from sales_data_processor.processors.sales_processor import SalesProcessor
-from sales_data_processor.processors.exceptions import ProcessingError
 
 
 class TestSalesProcessor:

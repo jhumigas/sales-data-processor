@@ -54,4 +54,7 @@ testpaths = [
 
 [tool.coverage.run]
 source=["src/sales_data_processor/*"]
-omit=["tests/*",".venv/*"]
+omit=["tests/*",".venv/*", "notebooks/*"]
+
+[tool.ruff]
+exclude = [".venv", "notebooks/*"]

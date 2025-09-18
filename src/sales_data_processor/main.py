@@ -12,7 +12,7 @@ from sales_data_processor.processors import (
 
 
 def main() -> None:
-    logger.info(f"Starting sales-data-processor...")
+    logger.info("Starting sales-data-processor...")
     # TODO: Create a pipeline class that would coordinate all three layers
     spark_session = SparkSessionFactory.get_session()
     config = ProjectConfig()
