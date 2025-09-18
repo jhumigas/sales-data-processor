@@ -12,7 +12,7 @@ For the CSV data, we could have had an intermediate storage format into parquet,
 
 The supposed data flow is the following:
 
-bronze layer (Object Storage) -> etl pipeline -> silver layer (delta lake)
+bronze layer (Object Storage) -> etl pipeline app -> silver layer (delta lake)
 
 Data Storage:
 
@@ -23,12 +23,11 @@ Data Storage:
 
 Make sure you have:
 
-- [uv](https://docs.astral.sh/uv/): Python package and project manager ([instructions](https://docs.astral.sh/uv/getting-started/installation/))
-- [Docker](https://www.docker.com/get-started/) or a docker container manager (use [colima](https://github.com/abiosoft/colima#installation) for macOS)
-- [sdkman](https://sdkman.io/) to manage SDKs
-- [Java](https://adoptium.net/fr/temurin/releases?version=11), you can use `sdk install java 11.0.28-tem`
-- [Spark](https://spark.apache.org/releases/spark-release-3-5-0.html) installed, you can use `sdk install spark 3.5.3`
-
+* [uv](https://docs.astral.sh/uv/): Python package and project manager ([instructions](https://docs.astral.sh/uv/getting-started/installation/))
+* [Docker](https://www.docker.com/get-started/) or a docker container manager (use [colima](https://github.com/abiosoft/colima#installation) for macOS)
+* [sdkman](https://sdkman.io/) to manage SDKs
+* [Java](https://adoptium.net/fr/temurin/releases?version=11), you can use `sdk install java 11.0.28-tem`
+* [Spark](https://spark.apache.org/releases/spark-release-3-5-0.html) installed, you can use `sdk install spark 3.5.3`
 
 ## Setup local env
 
@@ -38,7 +37,7 @@ Setup a python virtual environments and install dependencies with the following
 uv sync
 ```
 
-You can then run the pipeline with 
+You can then run the pipeline with
 
 ```sh
 python src/sales_data_processor/main.py
