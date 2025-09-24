@@ -48,7 +48,13 @@ python src/sales_data_processor/main.py
 For unit tests
 
 ```sh
-make unit-tests # Check if unit tests work
+make unit-tests
+```
+
+For easier portability you can run the tests within docker
+
+```sh
+make unit-tests-docker
 ```
 
 ### Project structure
