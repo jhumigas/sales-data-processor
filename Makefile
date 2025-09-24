@@ -1,5 +1,5 @@
 OUTPUT_DIR= .
-SRC_DIR= src/src/sales_data_processor
+SRC_DIR= src/sales_data_processor
 
 .PHONY: help
 help:
